@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>How to Build Ladybird Browser on Windows with WSL | Shivendra TechSter</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="description" content="Before we begin first you need to make sure that you have WSL 2 installed on your machine. WSL 2 is required to run GUI apps. If you have WSL 2 installed then you are ready to follow along.
+We&rsquo;ll use Ubuntu 22.04 because in Ubuntu 22.04 we can install GCC 12 with the apt package manager and we do not have to build it from the source.
+To install Ubuntu 22.">
+    <meta name="generator" content="Hugo 0.92.2" />
+    
+    
+    
+    
+      <meta name="robots" content="noindex, nofollow">
+    
+
+    
+<link rel="stylesheet" href="/ananke/css/main.min.css" >
+
+
+
+    
+    
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="How to Build Ladybird Browser on Windows with WSL" />
+<meta property="og:description" content="Before we begin first you need to make sure that you have WSL 2 installed on your machine. WSL 2 is required to run GUI apps. If you have WSL 2 installed then you are ready to follow along.
+We&rsquo;ll use Ubuntu 22.04 because in Ubuntu 22.04 we can install GCC 12 with the apt package manager and we do not have to build it from the source.
+To install Ubuntu 22." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://shivendra.dev/posts/how-to-build-ladybird-browser-on-windows-with-wsl/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-01-26T12:07:24+05:30" />
+<meta property="article:modified_time" content="2023-01-26T12:07:24+05:30" />
+
+<meta itemprop="name" content="How to Build Ladybird Browser on Windows with WSL">
+<meta itemprop="description" content="Before we begin first you need to make sure that you have WSL 2 installed on your machine. WSL 2 is required to run GUI apps. If you have WSL 2 installed then you are ready to follow along.
+We&rsquo;ll use Ubuntu 22.04 because in Ubuntu 22.04 we can install GCC 12 with the apt package manager and we do not have to build it from the source.
+To install Ubuntu 22."><meta itemprop="datePublished" content="2023-01-26T12:07:24+05:30" />
+<meta itemprop="dateModified" content="2023-01-26T12:07:24+05:30" />
+<meta itemprop="wordCount" content="207">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="How to Build Ladybird Browser on Windows with WSL"/>
+<meta name="twitter:description" content="Before we begin first you need to make sure that you have WSL 2 installed on your machine. WSL 2 is required to run GUI apps. If you have WSL 2 installed then you are ready to follow along.
+We&rsquo;ll use Ubuntu 22.04 because in Ubuntu 22.04 we can install GCC 12 with the apt package manager and we do not have to build it from the source.
+To install Ubuntu 22."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        Shivendra TechSter
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+<div class="ananke-socials">
+  
+</div>
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        POSTS
+      </aside>
+      
+
+
+
+
+
+
+
+
+
+
+  <div id="sharing" class="mt3 ananke-socials">
+    
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">How to Build Ladybird Browser on Windows with WSL</h1>
+      
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2023-01-26T12:07:24+05:30">January 26, 2023</time>
+      
+
+      
+      
+        <span class="f6 mv4 dib tracked"> - One minute read </span>
+        <span class="f6 mv4 dib tracked"> - 207 words </span>
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links mid-gray pr4-l w-two-thirds-l"><p>Before we begin first you need to make sure that you have WSL 2 installed on your machine. WSL 2 is required to run GUI apps. If you have WSL 2 installed then you are ready to follow along.</p>
+
+<p>We&rsquo;ll use Ubuntu 22.04 because in Ubuntu 22.04 we can install GCC 12 with the apt package manager and we do not have to build it from the source.</p>
+
+<p>To install Ubuntu 22.04 run this command in the powershell</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-powershell" data-lang="powershell">wsl --install -d Ubuntu-22.04</code></pre></div>
+<p>Once the installation is done we would clone the Serenity OS source code because Ladybird is a part of the Serenity OS monorepo. To clone the source code run this command</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git clone https://github.com/SerenityOS/serenity.git</code></pre></div>
+<p>Once the code of Serenity OS is cloned, We need to install the build dependencies. We would follow the steps described in <a href="https://github.com/SerenityOS/serenity/blob/master/Documentation/LadybirdBuildInstructions.md" target="_blank">serenity/Documentation/LadybirdBuildInstructions.md</a></p>
+
+<p>Install build dependencies</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt install build-essential cmake libgl1-mesa-dev ninja-build qt6-base-dev qt6-tools-dev-tools</code></pre></div>
+<p>Install GCC 12</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sudo apt install gcc-12 g++-12</code></pre></div>
+<p>Generate build files</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cmake -GNinja -S Ladybird -B Build/ladybird -D CMAKE_CXX_COMPILER /usr/bin/g++-12</code></pre></div>
+<p>Start build process</p>
+<pre tabindex="0"><code>cmake --build Build/ladybird</code></pre>
+<p>Once the build precess is done we can run the Ladybird browser with this command</p>
+<pre tabindex="0"><code>ninja -C Build/ladybird run</code></pre>
+<p>Here is a screenshot of Ladybird running on Windows with WSL2
+<img src="/posts/how-to-build-ladybird-browser-on-windows-with-wsl/ladybird-on-windows.jpeg" alt="Ladybird running on Windows with WSL2" /></p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://shivendra.dev/" >
+    &copy;  Shivendra TechSter 2023 
+  </a>
+    <div>
+<div class="ananke-socials">
+  
+</div>
+</div>
+  </div>
+</footer>
+
+  </body>
+</html>

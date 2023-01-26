@@ -6,7 +6,18 @@
     <description>Recent content on Shivendra TechSter</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 12 Dec 2022 22:26:52 +0530</lastBuildDate><atom:link href="https://shivendra.dev/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 26 Jan 2023 12:07:24 +0530</lastBuildDate><atom:link href="https://shivendra.dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Build Ladybird Browser on Windows with WSL</title>
+      <link>https://shivendra.dev/posts/how-to-build-ladybird-browser-on-windows-with-wsl/</link>
+      <pubDate>Thu, 26 Jan 2023 12:07:24 +0530</pubDate>
+      
+      <guid>https://shivendra.dev/posts/how-to-build-ladybird-browser-on-windows-with-wsl/</guid>
+      <description>Before we begin first you need to make sure that you have WSL 2 installed on your machine. WSL 2 is required to run GUI apps. If you have WSL 2 installed then you are ready to follow along.
+We&amp;rsquo;ll use Ubuntu 22.04 because in Ubuntu 22.04 we can install GCC 12 with the apt package manager and we do not have to build it from the source.
+To install Ubuntu 22.</description>
+    </item>
+    
     <item>
       <title>How to Use wxWidgets with Visual Studio 2022</title>
       <link>https://shivendra.dev/posts/how-to-use-wxwidgets-with-visual-studio-2022/</link>
