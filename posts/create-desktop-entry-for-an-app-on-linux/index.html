@@ -10,22 +10,22 @@
     
     
     
-    <title>Shivendra TechSter | Posts</title>
-    <meta name="title" content="Shivendra TechSter | Posts" />
-    <meta name="description" content="" />
+    <title>Shivendra TechSter | How to create Desktop Entry for an App on Linux</title>
+    <meta name="title" content="Shivendra TechSter | How to create Desktop Entry for an App on Linux" />
+    <meta name="description" content="Easiest way to create desktop entry for an app on Linux. This guide would work for Supports Budgie, GNOME, KDE, LXDE, MATE, Pantheon, Unity, and Xfce" />
     <meta name="theme-color" content="#0f172a">
 
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://shivendra.dev/posts/" />
-    <meta property="og:title" content="Shivendra TechSter | Posts" />
-    <meta property="og:description" content="" />
+    <meta property="og:url" content="https://shivendra.dev/posts/create-desktop-entry-for-an-app-on-linux/" />
+    <meta property="og:title" content="Shivendra TechSter | How to create Desktop Entry for an App on Linux" />
+    <meta property="og:description" content="Easiest way to create desktop entry for an app on Linux. This guide would work for Supports Budgie, GNOME, KDE, LXDE, MATE, Pantheon, Unity, and Xfce" />
 
     <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://shivendra.dev/posts/" />
-    <meta property="twitter:title" content="Shivendra TechSter | Posts" />
-    <meta property="twitter:description" content="" />
+    <meta property="twitter:url" content="https://shivendra.dev/posts/create-desktop-entry-for-an-app-on-linux/" />
+    <meta property="twitter:title" content="Shivendra TechSter | How to create Desktop Entry for an App on Linux" />
+    <meta property="twitter:description" content="Easiest way to create desktop entry for an app on Linux. This guide would work for Supports Budgie, GNOME, KDE, LXDE, MATE, Pantheon, Unity, and Xfce" />
 
-    <title>Shivendra TechSter | Posts</title>
+    <title>Shivendra TechSter | How to create Desktop Entry for an App on Linux</title>
 
     <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
@@ -73,28 +73,33 @@
         document.querySelector('.menu').classList.toggle('open')
     }, false)
 </script><div id="content" class="grow">
-<div class="container mx-auto p-4">
-    <h1 class="title text-center mt-16 mb-8">Posts</h1>
-    <div class="md:grid md:gap-6 lg:gap-8 md:grid-cols-2 xl:grid-cols-3">
-        <article
-    class="bg-black rounded-xl shadow-xl p-4 mb-4 lg:p-8 motion-reduce:transition-none transition-transform duration-1000 ease-in-out hover:scale-105">
-    <a href="https://shivendra.dev/posts/create-desktop-entry-for-an-app-on-linux/">
-        <p class="text-gray-200 text-sm mb-2 lg:mb-4">July 7, 2023</p>
+<div class="p-4 mt-6 max-w-[65ch] mx-auto">
+    <h1 class="text-3xl font-bold mb-4">How to create Desktop Entry for an App on Linux</h1>
+    <p class="mb-4">
 
-        <h2 class="text-xl font-bold lg:text-2xl">
-            How to create Desktop Entry for an App on Linux
-        </h2>
-    </a>
-</article><article
-    class="bg-black rounded-xl shadow-xl p-4 mb-4 lg:p-8 motion-reduce:transition-none transition-transform duration-1000 ease-in-out hover:scale-105">
-    <a href="https://shivendra.dev/posts/how-to-use-wxwidgets-with-visual-studio-2022/">
-        <p class="text-gray-200 text-sm mb-2 lg:mb-4">December 12, 2022</p>
+<div class="flex justify-between items-center mb-4">
+    <time datetime="2023-07-07">Jul 7, 2023</time>
+</div></p>
+    <div class="prose prose-invert lg:prose-xl">
+        <p>This post will guide on how to create desktop entry for an app on Linux. We would use <a href="https://bluesabre.org/projects/menulibre">MenuLibre</a> to do this. MenuLibre is an advance menu editor for the Free and Open Source desktop and supports Budgie, GNOME, KDE, LXDE, MATE, Pantheon, Unity, and Xfce.</p>
+<p><strong>Download and extract MenuLibre</strong><br>
+To download <code>MenuLibre</code> go the the <a href="https://github.com/bluesabre/menulibre">GitHub Repository</a> of MenuLibre and click on the latest release link in the Releases section.
+<img src="/posts/create-desktop-entry-for-an-app-on-linux/MenuLibre-github-page.jpg" alt="MenuLibre GitHub"></p>
+<p>Now from the Assets section download the MenuLibre tar ball. As of writing this post the name of the file is <code>menulibre-2.2.3.tar.gz</code>
+<img src="/posts/create-desktop-entry-for-an-app-on-linux/download-menulibre.png" alt="MenuLibre current version"></p>
+<p>To extract the downloaded tar ball execute the following command inside the directory you download MenuLibre:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>tar xvf menulibre-2.2.3.tar.gz
+</span></span></code></pre></div><p>If your filename if different then replace <code>menulibre-2.2.3.tar.gz</code> in the above command.</p>
+<p><strong>Creating the desktop entry</strong><br>
+Now <code>cd</code> into the extracted MenuLibre directory and execute <code>./bin/menulibre</code> and MenuLibre will open.
+Now to create the desktop entry click on the <code>+</code> button on the top left corner and then click Add launcher.
+<img src="/posts/create-desktop-entry-for-an-app-on-linux/click-add-launcher-button.png" alt="MenuLibre add launcher"></p>
+<p>Now click the briefcase icon to select the icon for the app. Replace the <code>New Launcher</code> text with the name of the app.</p>
+<p>In the Application details section inside input with Label command enter the command to launch the app or click the file icon to select the executable file of the app.</p>
+<p>And now to save the desktop entry click on the download button on the top left corner of the window.
+<img src="/posts/create-desktop-entry-for-an-app-on-linux/create-and-save-desktop-entry.png" alt="MenuLibre create and save desktop entry"></p>
+<p>Now the app should appear inside all apps.</p>
 
-        <h2 class="text-xl font-bold lg:text-2xl">
-            How to Use wxWidgets with Visual Studio 2022
-        </h2>
-    </a>
-</article>
     </div>
 </div>
 
