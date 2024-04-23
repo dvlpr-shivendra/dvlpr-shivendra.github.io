@@ -4,134 +4,142 @@
     <title>Tags on Shivendra TechSter</title>
     <link>https://shivendra.dev/tags/</link>
     <description>Recent content in Tags on Shivendra TechSter</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo 0.125.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 07 Jul 2023 22:52:36 +0530</lastBuildDate><atom:link href="https://shivendra.dev/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 22 Apr 2024 21:00:28 +0530</lastBuildDate>
+    <atom:link href="https://shivendra.dev/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Desktop entry</title>
+      <title>API</title>
+      <link>https://shivendra.dev/tags/api/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://shivendra.dev/tags/api/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gin</title>
+      <link>https://shivendra.dev/tags/gin/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://shivendra.dev/tags/gin/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Go</title>
+      <link>https://shivendra.dev/tags/go/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://shivendra.dev/tags/go/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>GORM</title>
+      <link>https://shivendra.dev/tags/gorm/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://shivendra.dev/tags/gorm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Postgres</title>
+      <link>https://shivendra.dev/tags/postgres/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://shivendra.dev/tags/postgres/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Desktop Entry</title>
       <link>https://shivendra.dev/tags/desktop-entry/</link>
-      <pubDate>Fri, 07 Jul 2023 22:52:36 +0530</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://shivendra.dev/tags/desktop-entry/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>GNOME</title>
       <link>https://shivendra.dev/tags/gnome/</link>
-      <pubDate>Fri, 07 Jul 2023 22:52:36 +0530</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://shivendra.dev/tags/gnome/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>KDE</title>
       <link>https://shivendra.dev/tags/kde/</link>
-      <pubDate>Fri, 07 Jul 2023 22:52:36 +0530</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://shivendra.dev/tags/kde/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Linux</title>
       <link>https://shivendra.dev/tags/linux/</link>
-      <pubDate>Fri, 07 Jul 2023 22:52:36 +0530</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://shivendra.dev/tags/linux/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>LXDE</title>
       <link>https://shivendra.dev/tags/lxde/</link>
-      <pubDate>Fri, 07 Jul 2023 22:52:36 +0530</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://shivendra.dev/tags/lxde/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Mate</title>
       <link>https://shivendra.dev/tags/mate/</link>
-      <pubDate>Fri, 07 Jul 2023 22:52:36 +0530</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://shivendra.dev/tags/mate/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>MenuLibre</title>
       <link>https://shivendra.dev/tags/menulibre/</link>
-      <pubDate>Fri, 07 Jul 2023 22:52:36 +0530</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://shivendra.dev/tags/menulibre/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Pantheon</title>
       <link>https://shivendra.dev/tags/pantheon/</link>
-      <pubDate>Fri, 07 Jul 2023 22:52:36 +0530</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://shivendra.dev/tags/pantheon/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Unity</title>
       <link>https://shivendra.dev/tags/unity/</link>
-      <pubDate>Fri, 07 Jul 2023 22:52:36 +0530</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://shivendra.dev/tags/unity/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Xfce</title>
       <link>https://shivendra.dev/tags/xfce/</link>
-      <pubDate>Fri, 07 Jul 2023 22:52:36 +0530</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://shivendra.dev/tags/xfce/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>CPP</title>
       <link>https://shivendra.dev/tags/cpp/</link>
-      <pubDate>Mon, 12 Dec 2022 22:26:52 +0530</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://shivendra.dev/tags/cpp/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>VisualStudio</title>
       <link>https://shivendra.dev/tags/visualstudio/</link>
-      <pubDate>Mon, 12 Dec 2022 22:26:52 +0530</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://shivendra.dev/tags/visualstudio/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>VisualStudio2022</title>
       <link>https://shivendra.dev/tags/visualstudio2022/</link>
-      <pubDate>Mon, 12 Dec 2022 22:26:52 +0530</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://shivendra.dev/tags/visualstudio2022/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>wxWidgets</title>
+      <title>WxWidgets</title>
       <link>https://shivendra.dev/tags/wxwidgets/</link>
-      <pubDate>Mon, 12 Dec 2022 22:26:52 +0530</pubDate>
-      
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://shivendra.dev/tags/wxwidgets/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

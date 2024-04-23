@@ -4,7 +4,8 @@
     <title>Categories on Shivendra TechSter</title>
     <link>https://shivendra.dev/categories/</link>
     <description>Recent content in Categories on Shivendra TechSter</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://shivendra.dev/categories/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo 0.125.2</generator>
+    <language>en-us</language>
+    <atom:link href="https://shivendra.dev/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -2,6 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://shivendra.dev/tags/api/</loc>
+    <lastmod>2024-04-22T21:00:28+05:30</lastmod>
+  </url><url>
+    <loc>https://shivendra.dev/posts/create-rest-api-with-go-gin-gorm-and-postgres/</loc>
+    <lastmod>2024-04-22T21:00:28+05:30</lastmod>
+  </url><url>
+    <loc>https://shivendra.dev/tags/gin/</loc>
+    <lastmod>2024-04-22T21:00:28+05:30</lastmod>
+  </url><url>
+    <loc>https://shivendra.dev/tags/go/</loc>
+    <lastmod>2024-04-22T21:00:28+05:30</lastmod>
+  </url><url>
+    <loc>https://shivendra.dev/tags/gorm/</loc>
+    <lastmod>2024-04-22T21:00:28+05:30</lastmod>
+  </url><url>
+    <loc>https://shivendra.dev/tags/postgres/</loc>
+    <lastmod>2024-04-22T21:00:28+05:30</lastmod>
+  </url><url>
+    <loc>https://shivendra.dev/posts/</loc>
+    <lastmod>2024-04-22T21:00:28+05:30</lastmod>
+  </url><url>
+    <loc>https://shivendra.dev/</loc>
+    <lastmod>2024-04-22T21:00:28+05:30</lastmod>
+  </url><url>
+    <loc>https://shivendra.dev/tags/</loc>
+    <lastmod>2024-04-22T21:00:28+05:30</lastmod>
+  </url><url>
     <loc>https://shivendra.dev/tags/desktop-entry/</loc>
     <lastmod>2023-07-07T22:52:36+05:30</lastmod>
   </url><url>
@@ -27,15 +54,6 @@
     <lastmod>2023-07-07T22:52:36+05:30</lastmod>
   </url><url>
     <loc>https://shivendra.dev/tags/pantheon/</loc>
-    <lastmod>2023-07-07T22:52:36+05:30</lastmod>
-  </url><url>
-    <loc>https://shivendra.dev/posts/</loc>
-    <lastmod>2023-07-07T22:52:36+05:30</lastmod>
-  </url><url>
-    <loc>https://shivendra.dev/</loc>
-    <lastmod>2023-07-07T22:52:36+05:30</lastmod>
-  </url><url>
-    <loc>https://shivendra.dev/tags/</loc>
     <lastmod>2023-07-07T22:52:36+05:30</lastmod>
   </url><url>
     <loc>https://shivendra.dev/tags/unity/</loc>

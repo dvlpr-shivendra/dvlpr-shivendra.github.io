@@ -4,29 +4,30 @@
     <title>Shivendra TechSter</title>
     <link>https://shivendra.dev/</link>
     <description>Recent content on Shivendra TechSter</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo 0.125.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 07 Jul 2023 22:52:36 +0530</lastBuildDate><atom:link href="https://shivendra.dev/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 22 Apr 2024 21:00:28 +0530</lastBuildDate>
+    <atom:link href="https://shivendra.dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Create Rest Api With Go Gin GORM and Postgres</title>
+      <link>https://shivendra.dev/posts/create-rest-api-with-go-gin-gorm-and-postgres/</link>
+      <pubDate>Mon, 22 Apr 2024 21:00:28 +0530</pubDate>
+      <guid>https://shivendra.dev/posts/create-rest-api-with-go-gin-gorm-and-postgres/</guid>
+      <description>In this post we&amp;rsquo;ll create an API using Go, Gin and GORM, that will allow us to save and fetch todo items from a Postgres database.&#xA;Project Setup To start the project setup, create a directory (folder) with the name of your project. Here I&amp;rsquo;ll create a directory named todo-go-backend.&#xA;Let&amp;rsquo;s initialize Go module in our project so that we can install libraries using go mod. Run the following command in the project directory:</description>
+    </item>
     <item>
       <title>How to create Desktop Entry for an App on Linux</title>
       <link>https://shivendra.dev/posts/create-desktop-entry-for-an-app-on-linux/</link>
       <pubDate>Fri, 07 Jul 2023 22:52:36 +0530</pubDate>
-      
       <guid>https://shivendra.dev/posts/create-desktop-entry-for-an-app-on-linux/</guid>
-      <description>This post will guide on how to create desktop entry for an app on Linux. We would use MenuLibre to do this. MenuLibre is an advance menu editor for the Free and Open Source desktop and supports Budgie, GNOME, KDE, LXDE, MATE, Pantheon, Unity, and Xfce.
-Download and extract MenuLibre
-To download MenuLibre go the the GitHub Repository of MenuLibre and click on the latest release link in the Releases section.</description>
+      <description>This post will guide on how to create desktop entry for an app on Linux. We would use MenuLibre to do this. MenuLibre is an advance menu editor for the Free and Open Source desktop and supports Budgie, GNOME, KDE, LXDE, MATE, Pantheon, Unity, and Xfce.&#xA;Download and extract MenuLibre&#xA;To download MenuLibre go the the GitHub Repository of MenuLibre and click on the latest release link in the Releases section.</description>
     </item>
-    
     <item>
       <title>How to Use wxWidgets with Visual Studio 2022</title>
       <link>https://shivendra.dev/posts/how-to-use-wxwidgets-with-visual-studio-2022/</link>
       <pubDate>Mon, 12 Dec 2022 22:26:52 +0530</pubDate>
-      
       <guid>https://shivendra.dev/posts/how-to-use-wxwidgets-with-visual-studio-2022/</guid>
-      <description>This post will guide you on how to build wxWidgets from source and use in your project. First of all go to wxWidgets.com/downloads and then download the Windows ZIP file from the Source code section.
-Now you can make a folder with the name SDKs (or whatever you prefer) and unzip the downloaded the source code in that folder. If you created the SDKs folder in C drive then right now your path to source code directory would be like this C:\SDKs\wxWidgets-3.</description>
+      <description>This post will guide you on how to build wxWidgets from source and use in your project. First of all go to wxWidgets.com/downloads and then download the Windows ZIP file from the Source code section.&#xA;Now you can make a folder with the name SDKs (or whatever you prefer) and unzip the downloaded the source code in that folder. If you created the SDKs folder in C drive then right now your path to source code directory would be like this C:\SDKs\wxWidgets-3.</description>
     </item>
-    
   </channel>
 </rss>
