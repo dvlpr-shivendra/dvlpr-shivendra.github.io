@@ -2,9 +2,7 @@
 <html lang="en"><head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     
     
@@ -73,7 +71,7 @@
         document.querySelector('.menu').classList.toggle('open')
     }, false)
 </script><div id="content" class="grow">
-<div class="p-4 mt-6 max-w-[65ch] mx-auto">
+<div class="p-4 mt-6 max-w-2xl mx-auto xl:max-w-3xl">
     <h1 class="text-3xl font-bold mb-4 sm:text-4xl md:text-6xl">Create Rest Api With Go Gin GORM and Postgres</h1>
     <p class="mb-4">
 
@@ -85,118 +83,118 @@
 <h2 id="project-setup">Project Setup</h2>
 <p>To start the project setup, create a directory (folder) with the name of your project. Here I&rsquo;ll create a directory named <code>todo-go-backend</code>.</p>
 <p>Let&rsquo;s initialize Go module in our project so that we can install libraries using go mod. Run the following command in the project directory:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>go mod init your-module-name
+<div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>go mod init your-module-name
 </span></span></code></pre></div><p>Most popular convention for naming the go modules is this, Let&rsquo;s assume you are going to push your project on GitHub then module name would look something like this <code>github.com/[your-username]/[project-name]</code>. So here I am going to name the module <code>github.com/dvlpr-shivendra/todo-go-backend</code>. So I would initialize the module like this:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>go mod init github.com/dvlpr-shivendra/todo-go-backend
+<div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>go mod init github.com/dvlpr-shivendra/todo-go-backend
 </span></span></code></pre></div><p>Now inside the project directory create a file named <code>main.go</code> and paste the following code in that file.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#b6a0ff">package</span> main
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e">//
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span><span style="display:flex;"><span><span style="color:#b6a0ff">func</span> <span style="color:#feacd0">main</span>() {
+</span></span><span style="display:flex;"><span>    <span style="color:#a8a8a8">//
+</span></span></span><span style="display:flex;"><span><span style="color:#a8a8a8"></span>}
 </span></span></code></pre></div><h2 id="gin-setup">Gin Setup</h2>
 <p>First of all let&rsquo;s install Gin. Run the following command in the project&rsquo;s root directory:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>go get -u github.com/gin-gonic/gin
+<div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>go get -u github.com/gin-gonic/gin
 </span></span></code></pre></div><p>Now import the Gin inside the <code>main.go</code>. Add following code below the <code>package main</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">import</span> (
-</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#34;github.com/gin-gonic/gin&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#b6a0ff">import</span> (
+</span></span><span style="display:flex;"><span>  <span style="color:#79a8ff">&#34;github.com/gin-gonic/gin&#34;</span>
 </span></span><span style="display:flex;"><span>)
 </span></span></code></pre></div><p>Inside the main function add this code to initialize the router:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">r</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">gin</span>.<span style="color:#a6e22e">Default</span>()
+<div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>r <span style="color:#00d3d0">:=</span> gin.<span style="color:#feacd0">Default</span>()
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">Run</span>() <span style="color:#75715e">// listen and serve on localhost:8080
+</span></span><span style="display:flex;"><span>r.<span style="color:#feacd0">Run</span>() <span style="color:#a8a8a8">// listen and serve on localhost:8080
 </span></span></span></code></pre></div><p>Now we are ready to add end points to the router. Let&rsquo;s add an endpoint to add todo items. Add this code below the <code>r := gin.Default()</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">POST</span>(<span style="color:#e6db74">&#34;/todos&#34;</span>, <span style="color:#a6e22e">handleAddTodo</span>)
+<div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>r.<span style="color:#feacd0">POST</span>(<span style="color:#79a8ff">&#34;/todos&#34;</span>, handleAddTodo)
 </span></span></code></pre></div><p>Now ff we hit <code>POST http://localhost:8080/todos</code> in the browser then Gin will execute handleAddTodo function, So let&rsquo;s add that above the <code>main function</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">handleAddTodo</span>(<span style="color:#a6e22e">c</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">gin</span>.<span style="color:#a6e22e">Context</span>) {
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">JSON</span>(<span style="color:#ae81ff">200</span>, <span style="color:#a6e22e">gin</span>.<span style="color:#a6e22e">H</span>{
-</span></span><span style="display:flex;"><span>		<span style="color:#e6db74">&#34;message&#34;</span>: <span style="color:#e6db74">&#34;Here we&#39;ll add a new todo&#34;</span>,
+<div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#b6a0ff">func</span> <span style="color:#feacd0">handleAddTodo</span>(c <span style="color:#00d3d0">*</span>gin.Context) {
+</span></span><span style="display:flex;"><span>	c.<span style="color:#feacd0">JSON</span>(<span style="color:#00bcff">200</span>, gin.H{
+</span></span><span style="display:flex;"><span>		<span style="color:#79a8ff">&#34;message&#34;</span>: <span style="color:#79a8ff">&#34;Here we&#39;ll add a new todo&#34;</span>,
 </span></span><span style="display:flex;"><span>	})
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Every Gin route handler receives <code>*gin.Context</code> in the argument. Using <code>gin.Context</code> we can interact with the request and send the response back.</p>
 <p>Right now the complete main.go would look like this</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#f92672">package</span> <span style="color:#a6e22e">main</span>
+<div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#b6a0ff">package</span> main
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> (
-</span></span><span style="display:flex;"><span>	<span style="color:#e6db74">&#34;github.com/gin-gonic/gin&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#b6a0ff">import</span> (
+</span></span><span style="display:flex;"><span>	<span style="color:#79a8ff">&#34;github.com/gin-gonic/gin&#34;</span>
 </span></span><span style="display:flex;"><span>)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">handleAddTodo</span>(<span style="color:#a6e22e">c</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">gin</span>.<span style="color:#a6e22e">Context</span>) {
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">JSON</span>(<span style="color:#ae81ff">200</span>, <span style="color:#a6e22e">gin</span>.<span style="color:#a6e22e">H</span>{
-</span></span><span style="display:flex;"><span>		<span style="color:#e6db74">&#34;message&#34;</span>: <span style="color:#e6db74">&#34;Here we&#39;ll add a new todo&#34;</span>,
+</span></span><span style="display:flex;"><span><span style="color:#b6a0ff">func</span> <span style="color:#feacd0">handleAddTodo</span>(c <span style="color:#00d3d0">*</span>gin.Context) {
+</span></span><span style="display:flex;"><span>	c.<span style="color:#feacd0">JSON</span>(<span style="color:#00bcff">200</span>, gin.H{
+</span></span><span style="display:flex;"><span>		<span style="color:#79a8ff">&#34;message&#34;</span>: <span style="color:#79a8ff">&#34;Here we&#39;ll add a new todo&#34;</span>,
 </span></span><span style="display:flex;"><span>	})
 </span></span><span style="display:flex;"><span>}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">main</span>() {
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">r</span> <span style="color:#f92672">:=</span> <span style="color:#a6e22e">gin</span>.<span style="color:#a6e22e">Default</span>()
+</span></span><span style="display:flex;"><span><span style="color:#b6a0ff">func</span> <span style="color:#feacd0">main</span>() {
+</span></span><span style="display:flex;"><span>	r <span style="color:#00d3d0">:=</span> gin.<span style="color:#feacd0">Default</span>()
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">POST</span>(<span style="color:#e6db74">&#34;/todos&#34;</span>, <span style="color:#a6e22e">handleAddTodo</span>)
+</span></span><span style="display:flex;"><span>	r.<span style="color:#feacd0">POST</span>(<span style="color:#79a8ff">&#34;/todos&#34;</span>, handleAddTodo)
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">Run</span>() <span style="color:#75715e">// listen and serve on 0.0.0.0:8080 (for windows &#34;localhost:8080&#34;)
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span><span style="display:flex;"><span>	r.<span style="color:#feacd0">Run</span>() <span style="color:#a8a8a8">// listen and serve on 0.0.0.0:8080 (for windows &#34;localhost:8080&#34;)
+</span></span></span><span style="display:flex;"><span><span style="color:#a8a8a8"></span>}
 </span></span></code></pre></div><p>Let&rsquo;s test our changes so far. Execute <code>go run main.go</code> in the terminal to start the application.</p>
 <p>Now open some API client and make a <code>POST</code> request at http://localhost:8080/todos and you should get the following response:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;message&#34;</span>: <span style="color:#e6db74">&#34;Here we&#39;ll add a new todo&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    &#34;message&#34;: <span style="color:#79a8ff">&#34;Here we&#39;ll add a new todo&#34;</span>
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Now we are ready to install and use GORM.</p>
 <h2 id="gorm-setup">GORM Setup</h2>
 <p>To install GORM run the following command in the terminal:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>go get -u gorm.io/gorm
+<div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>go get -u gorm.io/gorm
 </span></span></code></pre></div><p>Now let&rsquo;s install Postgres driver for GORM</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>go get -u gorm.io/driver/postgres
+<div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>go get -u gorm.io/driver/postgres
 </span></span></code></pre></div><p>We are now ready to connect to the Postgres database. Let&rsquo;s import GORM and the Postgres driver in the import section. After importing the import section should look like this:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#e6db74">&#34;github.com/gin-gonic/gin&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#79a8ff">&#34;github.com/gin-gonic/gin&#34;</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;gorm.io/gorm&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;gorm.io/driver/postgres&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#79a8ff">&#34;gorm.io/gorm&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#79a8ff">&#34;gorm.io/driver/postgres&#34;</span>
 </span></span></code></pre></div><p>Now let&rsquo;s add a global variable to store the gorm.DB instance, which we&rsquo;ll use to interact with the database. We can add the variable below the import section:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">db</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">gorm</span>.<span style="color:#a6e22e">DB</span>
+<div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#b6a0ff">var</span> db <span style="color:#00d3d0">*</span>gorm.DB
 </span></span></code></pre></div><p>We need to define the <code>Todo struct</code>. We&rsquo;ll use this struct to create todo table and to create todo items. Add following code below the <code>import section</code></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">type</span> <span style="color:#a6e22e">Todo</span> <span style="color:#66d9ef">struct</span> {
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">gorm</span>.<span style="color:#a6e22e">Model</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Title</span>     <span style="color:#66d9ef">string</span> <span style="color:#e6db74">`json:&#34;title&#34;`</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">Completed</span> <span style="color:#66d9ef">string</span> <span style="color:#e6db74">`json:&#34;completed&#34; gorm:&#34;default:false&#34;`</span>
+<div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#b6a0ff">type</span> Todo <span style="color:#b6a0ff">struct</span> {
+</span></span><span style="display:flex;"><span>	gorm.Model
+</span></span><span style="display:flex;"><span>	Title     <span style="color:#6ae4b9">string</span> <span style="color:#79a8ff">`json:&#34;title&#34;`</span>
+</span></span><span style="display:flex;"><span>	Completed <span style="color:#6ae4b9">string</span> <span style="color:#79a8ff">`json:&#34;completed&#34; gorm:&#34;default:false&#34;`</span>
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>below the db variable let&rsquo;s add a function to connect to the database and store the db instance in the global variable <code>db</code> which we just created.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">initDb</span>() {
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">err</span> <span style="color:#66d9ef">error</span>
+<div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#b6a0ff">func</span> <span style="color:#feacd0">initDb</span>() {
+</span></span><span style="display:flex;"><span>	<span style="color:#b6a0ff">var</span> err <span style="color:#6ae4b9">error</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">dsn</span> <span style="color:#f92672">:=</span> <span style="color:#e6db74">&#34;host=localhost user=postgres password=postgres dbname=todo-app port=5432 sslmode=disable&#34;</span>
+</span></span><span style="display:flex;"><span>	dsn <span style="color:#00d3d0">:=</span> <span style="color:#79a8ff">&#34;host=localhost user=postgres password=postgres dbname=todo-app port=5432 sslmode=disable&#34;</span>
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">db</span>, <span style="color:#a6e22e">err</span> = <span style="color:#a6e22e">gorm</span>.<span style="color:#a6e22e">Open</span>(<span style="color:#a6e22e">postgres</span>.<span style="color:#a6e22e">Open</span>(<span style="color:#a6e22e">dsn</span>), <span style="color:#f92672">&amp;</span><span style="color:#a6e22e">gorm</span>.<span style="color:#a6e22e">Config</span>{})
+</span></span><span style="display:flex;"><span>	db, err = gorm.<span style="color:#feacd0">Open</span>(postgres.<span style="color:#feacd0">Open</span>(dsn), <span style="color:#00d3d0">&amp;</span>gorm.Config{})
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">if</span> <span style="color:#a6e22e">err</span> <span style="color:#f92672">!=</span> <span style="color:#66d9ef">nil</span> {
-</span></span><span style="display:flex;"><span>		panic(<span style="color:#a6e22e">err</span>)
+</span></span><span style="display:flex;"><span>	<span style="color:#b6a0ff">if</span> err <span style="color:#00d3d0">!=</span> <span style="color:#00bcff">nil</span> {
+</span></span><span style="display:flex;"><span>		<span style="color:#f78fe7">panic</span>(err)
 </span></span><span style="display:flex;"><span>	}
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">AutoMigrate</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">Todo</span>{}) <span style="color:#75715e">// create table if not exist
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span><span style="display:flex;"><span>	db.<span style="color:#feacd0">AutoMigrate</span>(<span style="color:#00d3d0">&amp;</span>Todo{}) <span style="color:#a8a8a8">// create table if not exist
+</span></span></span><span style="display:flex;"><span><span style="color:#a8a8a8"></span>}
 </span></span></code></pre></div><p>Add the details in the dsn string as per your postgres installation.</p>
 <h3 id="updating-handleaddtodo-to-save-todos-in-database-using-gorm">Updating handleAddTodo to save Todos in database using Gorm</h3>
 <p>Now let&rsquo;s update the <code>handleAddTodo</code> to save the todo item in the database using GORM</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">handleAddTodo</span>(<span style="color:#a6e22e">c</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">gin</span>.<span style="color:#a6e22e">Context</span>) {
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">todo</span> <span style="color:#a6e22e">Todo</span>
+<div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#b6a0ff">func</span> <span style="color:#feacd0">handleAddTodo</span>(c <span style="color:#00d3d0">*</span>gin.Context) {
+</span></span><span style="display:flex;"><span>	<span style="color:#b6a0ff">var</span> todo Todo
 </span></span><span style="display:flex;"><span>	
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">BindJSON</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">todo</span>) <span style="color:#75715e">// bind request body to struct
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">Create</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">todo</span>) <span style="color:#75715e">// insert data to database
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">JSON</span>(<span style="color:#ae81ff">200</span>, <span style="color:#a6e22e">todo</span>) <span style="color:#75715e">// send response
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span><span style="display:flex;"><span>	c.<span style="color:#feacd0">BindJSON</span>(<span style="color:#00d3d0">&amp;</span>todo) <span style="color:#a8a8a8">// bind request body to struct
+</span></span></span><span style="display:flex;"><span><span style="color:#a8a8a8"></span>
+</span></span><span style="display:flex;"><span>	db.<span style="color:#feacd0">Create</span>(<span style="color:#00d3d0">&amp;</span>todo) <span style="color:#a8a8a8">// insert data to database
+</span></span></span><span style="display:flex;"><span><span style="color:#a8a8a8"></span>
+</span></span><span style="display:flex;"><span>	c.<span style="color:#feacd0">JSON</span>(<span style="color:#00bcff">200</span>, todo) <span style="color:#a8a8a8">// send response
+</span></span></span><span style="display:flex;"><span><span style="color:#a8a8a8"></span>}
 </span></span></code></pre></div><p>Now make a <code>POST</code> request at http://localhost:8080/todos . The body of the request should contain following JSON</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>	<span style="color:#f92672">&#34;title&#34;</span>: <span style="color:#e6db74">&#34;Write a blog&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>	&#34;title&#34;: <span style="color:#79a8ff">&#34;Write a blog&#34;</span>
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>If everything went as expected then todo should get inserted in a table name <code>todos</code> and response body should contain the newly created todo.</p>
 <h3 id="endpoint-to-fetch-todo-list">Endpoint to fetch Todo list</h3>
 <p>Let&rsquo;s add the endpoint to fetch todo list. To define the endpoint add the following code above the endpoint to save todo.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#a6e22e">r</span>.<span style="color:#a6e22e">GET</span>(<span style="color:#e6db74">&#34;/todos&#34;</span>, <span style="color:#a6e22e">handleFetchTodos</span>)
+<div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span>r.<span style="color:#feacd0">GET</span>(<span style="color:#79a8ff">&#34;/todos&#34;</span>, handleFetchTodos)
 </span></span></code></pre></div><p>Now let&rsquo;s define <code>handleFetchTodos</code> below the <code>handleSaveTodo</code> function</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">handleFetchTodos</span>(<span style="color:#a6e22e">c</span> <span style="color:#f92672">*</span><span style="color:#a6e22e">gin</span>.<span style="color:#a6e22e">Context</span>) {
-</span></span><span style="display:flex;"><span>	<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">todos</span> []<span style="color:#a6e22e">Todo</span>
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">db</span>.<span style="color:#a6e22e">Find</span>(<span style="color:#f92672">&amp;</span><span style="color:#a6e22e">todos</span>)
-</span></span><span style="display:flex;"><span>	<span style="color:#a6e22e">c</span>.<span style="color:#a6e22e">JSON</span>(<span style="color:#ae81ff">200</span>, <span style="color:#a6e22e">todos</span>)
+<div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span><span style="color:#b6a0ff">func</span> <span style="color:#feacd0">handleFetchTodos</span>(c <span style="color:#00d3d0">*</span>gin.Context) {
+</span></span><span style="display:flex;"><span>	<span style="color:#b6a0ff">var</span> todos []Todo
+</span></span><span style="display:flex;"><span>	db.<span style="color:#feacd0">Find</span>(<span style="color:#00d3d0">&amp;</span>todos)
+</span></span><span style="display:flex;"><span>	c.<span style="color:#feacd0">JSON</span>(<span style="color:#00bcff">200</span>, todos)
 </span></span><span style="display:flex;"><span>}
 </span></span></code></pre></div><p>Now make a get request to GET http://localhost:8080/todos and you should get the array todo in response.</p>
 

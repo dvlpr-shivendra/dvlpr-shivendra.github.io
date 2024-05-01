@@ -2,9 +2,7 @@
 <html lang="en"><head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     
     
@@ -73,7 +71,7 @@
         document.querySelector('.menu').classList.toggle('open')
     }, false)
 </script><div id="content" class="grow">
-<div class="p-4 mt-6 max-w-[65ch] mx-auto">
+<div class="p-4 mt-6 max-w-2xl mx-auto xl:max-w-3xl">
     <h1 class="text-3xl font-bold mb-4 sm:text-4xl md:text-6xl">How to Use wxWidgets with Visual Studio 2022</h1>
     <p class="mb-4">
 
@@ -103,29 +101,29 @@ First of all go to <a href="https://www.wxWidgets.org/downloads">wxWidgets.com/d
 <p>Once the project is opened in the Visual Studio open the .cpp file from the Source files section in solution explorer. File name would have the same name as the project. For example if The project name is HelloWX then file would be HelloWX.cpp</p>
 <p><img src="/posts/how-to-use-wxwidgets-with-visual-studio-2022/open-main-file.webp" alt="open main file"></p>
 <p>Now copy and paste this code in the file you just opened:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#include</span> <span style="color:#75715e">&lt;wx/wx.h&gt;</span><span style="color:#75715e">
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyApp</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">public</span> wxApp
+<div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#a8a8a8">#include</span> <span style="color:#a8a8a8">&lt;wx/wx.h&gt;</span><span style="color:#a8a8a8">
+</span></span></span><span style="display:flex;"><span><span style="color:#a8a8a8"></span>
+</span></span><span style="display:flex;"><span><span style="color:#b6a0ff">class</span> MyApp <span style="color:#00d3d0">:</span> <span style="color:#b6a0ff">public</span> wxApp
 </span></span><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">virtual</span> <span style="color:#66d9ef">bool</span> OnInit();
+</span></span><span style="display:flex;"><span><span style="color:#b6a0ff">public</span><span style="color:#00d3d0">:</span>
+</span></span><span style="display:flex;"><span>   <span style="color:#b6a0ff">virtual</span> <span style="color:#6ae4b9">bool</span> OnInit();
 </span></span><span style="display:flex;"><span>};
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyFrame</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">public</span> wxFrame
+</span></span><span style="display:flex;"><span><span style="color:#b6a0ff">class</span> MyFrame <span style="color:#00d3d0">:</span> <span style="color:#b6a0ff">public</span> wxFrame
 </span></span><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span><span style="color:#f92672">:</span>
-</span></span><span style="display:flex;"><span>   MyFrame(<span style="color:#66d9ef">const</span> wxString<span style="color:#f92672">&amp;</span> title, <span style="color:#66d9ef">const</span> wxPoint<span style="color:#f92672">&amp;</span> pos, <span style="color:#66d9ef">const</span> wxSize<span style="color:#f92672">&amp;</span> size);
+</span></span><span style="display:flex;"><span><span style="color:#b6a0ff">public</span><span style="color:#00d3d0">:</span>
+</span></span><span style="display:flex;"><span>   MyFrame(<span style="color:#b6a0ff">const</span> wxString<span style="color:#00d3d0">&amp;</span> title, <span style="color:#b6a0ff">const</span> wxPoint<span style="color:#00d3d0">&amp;</span> pos, <span style="color:#b6a0ff">const</span> wxSize<span style="color:#00d3d0">&amp;</span> size);
 </span></span><span style="display:flex;"><span>};
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>wxIMPLEMENT_APP(MyApp);
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">bool</span> MyApp<span style="color:#f92672">::</span>OnInit()
+</span></span><span style="display:flex;"><span><span style="color:#6ae4b9">bool</span> MyApp<span style="color:#00d3d0">::</span>OnInit()
 </span></span><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>   MyFrame<span style="color:#f92672">*</span> frame <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> MyFrame(<span style="color:#e6db74">&#34;Hello World&#34;</span>, wxPoint(<span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">50</span>), wxSize(<span style="color:#ae81ff">450</span>, <span style="color:#ae81ff">340</span>));
-</span></span><span style="display:flex;"><span>   frame<span style="color:#f92672">-&gt;</span>Show(true);
-</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">return</span> true;
+</span></span><span style="display:flex;"><span>   MyFrame<span style="color:#00d3d0">*</span> frame <span style="color:#00d3d0">=</span> <span style="color:#b6a0ff">new</span> MyFrame(<span style="color:#79a8ff">&#34;Hello World&#34;</span>, wxPoint(<span style="color:#00bcff">50</span>, <span style="color:#00bcff">50</span>), wxSize(<span style="color:#00bcff">450</span>, <span style="color:#00bcff">340</span>));
+</span></span><span style="display:flex;"><span>   frame<span style="color:#00d3d0">-&gt;</span>Show(<span style="color:#f78fe7">true</span>);
+</span></span><span style="display:flex;"><span>   <span style="color:#b6a0ff">return</span> <span style="color:#f78fe7">true</span>;
 </span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>MyFrame<span style="color:#f92672">::</span>MyFrame(<span style="color:#66d9ef">const</span> wxString<span style="color:#f92672">&amp;</span> title, <span style="color:#66d9ef">const</span> wxPoint<span style="color:#f92672">&amp;</span> pos, <span style="color:#66d9ef">const</span> wxSize<span style="color:#f92672">&amp;</span> size)
-</span></span><span style="display:flex;"><span>   <span style="color:#f92672">:</span> wxFrame(NULL, wxID_ANY, title, pos, size)
+</span></span><span style="display:flex;"><span>MyFrame<span style="color:#00d3d0">::</span>MyFrame(<span style="color:#b6a0ff">const</span> wxString<span style="color:#00d3d0">&amp;</span> title, <span style="color:#b6a0ff">const</span> wxPoint<span style="color:#00d3d0">&amp;</span> pos, <span style="color:#b6a0ff">const</span> wxSize<span style="color:#00d3d0">&amp;</span> size)
+</span></span><span style="display:flex;"><span>   <span style="color:#00d3d0">:</span> wxFrame(<span style="color:#f78fe7">NULL</span>, wxID_ANY, title, pos, size)
 </span></span><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>}

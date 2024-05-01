@@ -2,9 +2,7 @@
 <html lang="en"><head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     
     
@@ -73,7 +71,7 @@
         document.querySelector('.menu').classList.toggle('open')
     }, false)
 </script><div id="content" class="grow">
-<div class="p-4 mt-6 max-w-[65ch] mx-auto">
+<div class="p-4 mt-6 max-w-2xl mx-auto xl:max-w-3xl">
     <h1 class="text-3xl font-bold mb-4 sm:text-4xl md:text-6xl">How to create Desktop Entry for an App on Linux</h1>
     <p class="mb-4">
 
@@ -88,7 +86,7 @@ To download <code>MenuLibre</code> go the the <a href="https://github.com/bluesa
 <p>Now from the Assets section download the MenuLibre tar ball. As of writing this post the name of the file is <code>menulibre-2.2.3.tar.gz</code>
 <img src="/posts/create-desktop-entry-for-an-app-on-linux/download-menulibre.png" alt="MenuLibre current version"></p>
 <p>To extract the downloaded tar ball execute the following command inside the directory you download MenuLibre:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>tar xvf menulibre-2.2.3.tar.gz
+<div class="highlight"><pre tabindex="0" style="color:#fff;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>tar xvf menulibre-2.2.3.tar.gz
 </span></span></code></pre></div><p>If your filename if different then replace <code>menulibre-2.2.3.tar.gz</code> in the above command.</p>
 <p><strong>Creating the desktop entry</strong><br>
 Now <code>cd</code> into the extracted MenuLibre directory and execute <code>./bin/menulibre</code> and MenuLibre will open.

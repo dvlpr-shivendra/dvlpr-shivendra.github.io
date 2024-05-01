@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-    html {
-        font-family: 'Cabin', sans-serif;
-    }
-}
-
 @layer components {
     .menu {
         @apply fixed left-0 top-0 h-screen w-screen flex justify-center items-center bg-black md:bg-inherit flex-col md:static md:flex-row md:h-auto md:w-auto transition-transform duration-500 ease-in-out translate-x-full md:translate-x-0;
