@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Go on Shivendra TechSter</title>
-    <link>https://shivendra.dev/tags/go/</link>
-    <description>Recent content in Go on Shivendra TechSter</description>
+    <title>LeetCode on Shivendra TechSter</title>
+    <link>https://shivendra.dev/tags/leetcode/</link>
+    <description>Recent content in LeetCode on Shivendra TechSter</description>
     <generator>Hugo 0.125.2</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 03 May 2024 23:21:12 +0530</lastBuildDate>
-    <atom:link href="https://shivendra.dev/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://shivendra.dev/tags/leetcode/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>LeetCode 35: Search Insert Position Solution in Go</title>
       <link>https://shivendra.dev/posts/leetcode-35-search-insert-position-solution-in-go/</link>
       <pubDate>Fri, 03 May 2024 23:21:12 +0530</pubDate>
       <guid>https://shivendra.dev/posts/leetcode-35-search-insert-position-solution-in-go/</guid>
       <description>In this post we&amp;rsquo;ll solve and discuss the LeetCode problem no. 35 - Search Insert Position. We&amp;rsquo;ll be using Go language.&#xA;The problem has the following description:&#xA;Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.&#xA;You must write an algorithm with O(log n) runtime complexity&amp;quot;</description>
-    </item>
-    <item>
-      <title>Create Rest Api With Go Gin GORM and Postgres</title>
-      <link>https://shivendra.dev/posts/create-rest-api-with-go-gin-gorm-and-postgres/</link>
-      <pubDate>Mon, 22 Apr 2024 21:00:28 +0530</pubDate>
-      <guid>https://shivendra.dev/posts/create-rest-api-with-go-gin-gorm-and-postgres/</guid>
-      <description>In this post we&amp;rsquo;ll create an API using Go, Gin and GORM, that will allow us to save and fetch todo items from a Postgres database.&#xA;Project Setup To start the project setup, create a directory (folder) with the name of your project. Here I&amp;rsquo;ll create a directory named todo-go-backend.&#xA;Let&amp;rsquo;s initialize Go module in our project so that we can install libraries using go mod. Run the following command in the project directory:</description>
     </item>
   </channel>
 </rss>
