@@ -6,29 +6,8 @@
     <description>Recent content in Tags on Shivendra TechSter</description>
     <generator>Hugo 0.125.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 03 May 2024 23:21:12 +0530</lastBuildDate>
+    <lastBuildDate>Mon, 22 Apr 2024 21:00:28 +0530</lastBuildDate>
     <atom:link href="https://shivendra.dev/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>BinarySearch</title>
-      <link>https://shivendra.dev/tags/binarysearch/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://shivendra.dev/tags/binarysearch/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Go</title>
-      <link>https://shivendra.dev/tags/go/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://shivendra.dev/tags/go/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>LeetCode</title>
-      <link>https://shivendra.dev/tags/leetcode/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://shivendra.dev/tags/leetcode/</guid>
-      <description></description>
-    </item>
     <item>
       <title>API</title>
       <link>https://shivendra.dev/tags/api/</link>
@@ -41,6 +20,13 @@
       <link>https://shivendra.dev/tags/gin/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://shivendra.dev/tags/gin/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Go</title>
+      <link>https://shivendra.dev/tags/go/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://shivendra.dev/tags/go/</guid>
       <description></description>
     </item>
     <item>
