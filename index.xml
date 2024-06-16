@@ -6,8 +6,15 @@
     <description>Recent content on Shivendra TechSter</description>
     <generator>Hugo 0.125.2</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 22 Apr 2024 21:00:28 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 16 Jun 2024 14:07:29 +0530</lastBuildDate>
     <atom:link href="https://shivendra.dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Reset Logitech Keyboard</title>
+      <link>https://shivendra.dev/posts/how-to-reset-logitech-keyboard/</link>
+      <pubDate>Sun, 16 Jun 2024 14:07:29 +0530</pubDate>
+      <guid>https://shivendra.dev/posts/how-to-reset-logitech-keyboard/</guid>
+      <description>Press these keys individually in the mentioned order do not press them together:&#xA;esc o (this is alphabet o not zero) esc o esc b After successful reset keyboards which can connect up to three devices should have the LEDs blinking on F1, F2, and F3 keys.&#xA;There may be few reasons you want to reset your logitech keyboard, something is not working as expected, the keyboard is powering on but not functioning at all or you are reselling your keyboard.</description>
+    </item>
     <item>
       <title>Create Rest Api With Go Gin GORM and Postgres</title>
       <link>https://shivendra.dev/posts/create-rest-api-with-go-gin-gorm-and-postgres/</link>
